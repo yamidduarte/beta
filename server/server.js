@@ -5,7 +5,7 @@ const app = express()
 // since we will be calling this like an api, we're gonna be sending information over json
 app.use(express.json())
 // same client and server URL setup for Stripe
-app.use(express.static('public'))
+app.use(express.static('../public'))
 
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
